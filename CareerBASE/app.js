@@ -20,6 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/search', require('./routes/search'));
 app.use('/data', require('./routes/data'));
 app.use('/inbox', require('./routes/inbox'));
 
