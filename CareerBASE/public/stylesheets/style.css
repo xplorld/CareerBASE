@@ -59,9 +59,9 @@ a {
 }
 
 
-#btn-acc, #btn-rej {
-  margin: 5px;
+#btn {
   width: 100px;
+  margin: 5px;
 }
 
 #company-name, #position {
@@ -80,4 +80,12 @@ a {
 #request-list {
   margin-top: 50px;
   padding-top: 50px;
+}
+
+#search-area {
+  width: 700px;
+}
+
+#search-input {
+  width: 550px;
 }

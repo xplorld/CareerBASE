@@ -23,6 +23,8 @@ app.use('/', indexRouter);
 app.use('/search', require('./routes/search'));
 app.use('/data', require('./routes/data'));
 app.use('/inbox', require('./routes/inbox'));
+app.use('/outbox', require('./routes/outbox'));
+app.use('/signin', require('./routes/signin'));
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  form(action='/api/signin', method='POST')
+    .form-group
+      label(for='exampleInputPassword1') Passphrase
+      input#exampleInputPassword1.form-control(type='password' placeholder='Password')
+    button.btn.btn-primary(type='submit') Submit
+

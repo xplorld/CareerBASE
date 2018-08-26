@@ -1,15 +1,18 @@
 extends layout
 
 block content-title
-  h1 Search: Discover candidates
+  h1 Outbox: Request I sent
 
 block content
   .container
     .row.mt-2
-      nav.navbar.navbar-light.bg-light#search-area
-        form.form-inline
-        input.form-control.mr-sm-2#search-input(type='search' placeholder='Search' aria-label='Search')
-        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+      .col-1
+        .mt-1 Status
+      .col  
+        .btn-group(data-toggle="buttons")
+          button.btn.btn-outline-secondary.active(type='button', autofocus='autofocus') Pending
+          button.btn.btn-outline-secondary(type='button') Granted
+          button.btn.btn-outline-secondary(type='button') Rejected
     .row.mt-2#request-list
       .list-group
         .list-group-item.request-item.container
@@ -20,9 +23,9 @@ block content
               .company.row-sm-8
                 p#company-name Carnegie Mellon University
               .position.row-sm-4
-                p#position Bob (student)
+                p#position Pascal (student)
             .btns.col-sm-3
-              button.btn.btn-success#btn(type='button') Request
+              button.btn.btn-success#btn(type='button') Accepted
         .list-group-item.request-item
           .row
             .logo.col-sm-2
@@ -31,7 +34,7 @@ block content
               .company.row-sm-8
                 p#company-name Carnegie Mellon University
               .position.row-sm-4
-                p#position Hakan (professor)
+                p#position Ryne (student)
             .btns.col-sm-3
-              button.btn.btn-success#btn(type='button') Request
+              button.btn.btn-warning#btn(type='button') Pending
 
