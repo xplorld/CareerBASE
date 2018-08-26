@@ -13,10 +13,17 @@ html
     script(src=" https://mindmup.github.io/editable-table/mindmup-editabletable.js")
   body
     .sidenav
-      a(href='/data') data
-      a(href='/search') search
-      a(href='/inbox') inbox
-      a(href='/outbox') outbox
+      .name
+        p(onclick="location.href='/';") CareerBase
+      .btns
+        button#icon(onclick="location.href='/data';")
+          img(src='/images/icon/user.png')
+        button#icon(onclick="location.href='/search';")
+          img(src='/images/icon/search.png')
+        button#icon(onclick="location.href='/inbox';")
+          img(src='/images/icon/download2.png')
+        button#icon(onclick="location.href='/outbox';")
+          img(src='/images/icon/upload2.png')
     .main
       .content-title
         block content-title
