@@ -1,0 +1,38 @@
+extends layout
+
+block content-title
+    h1 Data of #{user}
+
+block content
+    h2 Public data
+    table.table.data-list
+        thead
+            tr
+                th(scope='col') key
+                th(scope='col') value
+        tbody
+            tr
+                td k1
+                td v1
+            tr
+                td k2
+                td v2
+            tr
+                td k3
+                td v3
+    h2 Private data
+    table.table.data-list
+        thead
+            tr
+                th(scope='col') key
+                th(scope='col') value
+        tbody
+            tr
+                td k1
+                td v1
+            tr
+                td k2
+                td v2
+            tr
+                td k3
+                td v3
