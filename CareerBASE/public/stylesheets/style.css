@@ -35,6 +35,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.request-item {
+  width: 650px;
+}
+
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
   max-width: 800px;

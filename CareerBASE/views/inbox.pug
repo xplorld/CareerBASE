@@ -1,0 +1,27 @@
+extends layout
+
+block content-title
+  h1 Inbox: Requests I received
+
+block content
+  .container
+    .row
+      .col-1
+        .mt-1 From
+      .col  
+        .btn-group(data-toggle="buttons")
+          button.btn.btn-outline-secondary.active(type='button', autofocus='autofocus') Validated HR
+          button.btn.btn-outline-secondary(type='button') All
+    .row.mt-2
+      .col-1
+        .mt-1 Status
+      .col  
+        .btn-group(data-toggle="buttons")
+          button.btn.btn-outline-secondary.active(type='button', autofocus='autofocus') Pending
+          button.btn.btn-outline-secondary(type='button') Granted
+          button.btn.btn-outline-secondary(type='button') Rejected
+    .row.mt-2
+      .list-group
+        .list-group-item.request-item
+          img.request-item-image(src='https://developers.google.com/identity/images/g-logo.png')
+        .list-group-item.request-item  yyy
