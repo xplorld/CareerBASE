@@ -3,7 +3,7 @@ var router = express.Router();
 
 // redirect to my page.
 router.get('/', function (req, res, next) {
-    res.redirect('Hao');
+    res.redirect('/data/Hao');
 });
 
 router.get('/:user', function (req, res, next) {
