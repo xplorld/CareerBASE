@@ -4,10 +4,30 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/careerbase')
+  .then(() => console.log('MongoDB connection succesful'))
+  .catch((err) => console.error(err));
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
+
+//login systems
+app.use(require('express-session')({
+  secret: 'a great project for a great hackathon',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+var User = require('./models/user');
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,7 +39,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', require('./routes/index'));
+app.use('/api', require('./routes/api'));
 app.use('/search', require('./routes/search'));
 app.use('/data', require('./routes/data'));
 app.use('/inbox', require('./routes/inbox'));
