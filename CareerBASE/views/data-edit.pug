@@ -1,0 +1,49 @@
+extends layout
+
+block content-title
+    h1 Edit Data of #{user}
+
+block content
+    script(src="/scripts/data-edit.js")
+    h2 Public data
+    table#public-data-edit-table.table.data-list
+        thead
+            tr
+                th(scope='col') key
+                th(scope='col') value
+        tbody
+            tr
+                td k1
+                td v1
+            tr
+                td k2
+                td v2
+            tr
+                td k3
+                td v3
+    button.btn.btn-outline-primary(type='button',onclick="add_line('#public-data-edit-table');") + Line
+
+    hr
+
+    h2 Private data
+    table#private-data-edit-table.table.data-list
+        thead
+            tr
+                th(scope='col') key
+                th(scope='col') value
+        tbody
+            tr
+                td k1
+                td v1
+            tr
+                td k2
+                td v2
+            tr
+                td k3
+                td v3
+    button.btn.btn-outline-primary(type='button',onclick="add_line('#private-data-edit-table');") + Line
+
+    hr
+
+    button#edit-cancel-button.btn.btn-secondary(type='button', style='margin:1px;') Cancel
+    button#edit-submit-button.btn.btn-primary(type='button', style='margin:1px;') Submit
