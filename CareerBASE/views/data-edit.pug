@@ -1,11 +1,12 @@
 extends layout
 
 block content-title
-    h1 Data of #{user}
+    h1 Edit Data of #{user}
 
 block content
+    script(src="/scripts/data-edit.js")
     h2 Public data
-    table.table.data-list
+    table#public-data-edit-table.table.data-list
         thead
             tr
                 th(scope='col') key
@@ -20,8 +21,12 @@ block content
             tr
                 td k3
                 td v3
+    button.btn.btn-outline-primary(type='button',onclick="add_line('#public-data-edit-table');") + Line
+
+    hr
+
     h2 Private data
-    table.table.data-list
+    table#private-data-edit-table.table.data-list
         thead
             tr
                 th(scope='col') key
@@ -36,3 +41,9 @@ block content
             tr
                 td k3
                 td v3
+    button.btn.btn-outline-primary(type='button',onclick="add_line('#private-data-edit-table');") + Line
+
+    hr
+
+    button#edit-cancel-button.btn.btn-secondary(type='button', style='margin:1px;') Cancel
+    button#edit-submit-button.btn.btn-primary(type='button', style='margin:1px;') Submit
