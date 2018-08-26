@@ -89,3 +89,13 @@ a {
 #search-input {
   width: 550px;
 }
+
+#signin-btn {
+  width: 200px;
+  margin-top: 50px;
+}
+
+#description {
+  margin-top: 50px;
+  width: 1000px;
+}
