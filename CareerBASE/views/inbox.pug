@@ -20,8 +20,29 @@ block content
           button.btn.btn-outline-secondary.active(type='button', autofocus='autofocus') Pending
           button.btn.btn-outline-secondary(type='button') Granted
           button.btn.btn-outline-secondary(type='button') Rejected
-    .row.mt-2
+    .row.mt-2#request-list
       .list-group
+        .list-group-item.request-item.container
+          .row
+            .logo.col-sm-2
+              img.request-item-image#logo(src='https://developers.google.com/identity/images/g-logo.png')
+            .fromwhere.col-sm-7
+              .company.row-sm-8
+                p#company-name Google Inc
+              .position.row-sm-4
+                p#position Senior Recruiter
+            .btns.col-sm-3
+              button.btn.btn-success#btn-acc(type='button') Accept
+              button.btn.btn-danger#btn-rej(type='button') Reject
         .list-group-item.request-item
-          img.request-item-image(src='https://developers.google.com/identity/images/g-logo.png')
-        .list-group-item.request-item  yyy
+          .row
+            .logo.col-sm-2
+              img.request-item-image#logo(src='https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png')
+            .fromwhere.col-sm-7
+              .company.row-sm-8
+                p#company-name Facebook Inc
+              .position.row-sm-4
+                p#position Senior Recruiter
+            .btns.col-sm-3
+              button.btn.btn-warning#btn-acc(type='button') granted
+

@@ -57,3 +57,27 @@ a {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+#btn-acc, #btn-rej {
+  margin: 5px;
+  width: 100px;
+}
+
+#company-name, #position {
+  font-size: 20px;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+#logo {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  margin-left: 12px;
+}
+
+#request-list {
+  margin-top: 50px;
+  padding-top: 50px;
+}
